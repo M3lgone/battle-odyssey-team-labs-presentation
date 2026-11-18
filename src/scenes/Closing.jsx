@@ -11,7 +11,7 @@ export default function Closing() {
         <span>PROYECTO FINAL · FULL-STACK</span>
       </div>
       <div className="closing-copy">
-        <p className="eyebrow"><span />07 · CIERRE</p>
+        <p className="eyebrow"><span />CIERRE</p>
         <h1>De una idea <em>a una aplicación funcional.</em></h1>
         <p className="closing-intro">Eso es lo que he practicado construyendo Battle Odyssey.</p>
         <ul>

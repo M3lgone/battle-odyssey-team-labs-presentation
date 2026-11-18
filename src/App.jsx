@@ -54,9 +54,9 @@ export default function App() {
   const Scene = SCENE_COMPONENTS[scene.id]
 
   return (
-    <main className="presentation-shell">
-      <div className="deck-stage" aria-label="Presentación Battle Odyssey para Tema Labs">
-        <Hud scene={scene} index={index} total={SCENES.length} />
+    <main className="experience-shell">
+      <div className="deck-stage" aria-label="Recorrido de Battle Odyssey">
+        <Hud index={index} total={SCENES.length} />
         <div className="scene-viewport" key={scene.id}>
           <Scene />
         </div>

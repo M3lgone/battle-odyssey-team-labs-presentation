@@ -2,9 +2,9 @@ import SceneLayout from '../components/SceneLayout.jsx'
 import battleScreenshot from '../assets/screenshots/battle.png'
 
 const proofPoints = [
-  { number: '01', title: 'Una partida completa', detail: 'Selección · turnos · progresión' },
-  { number: '02', title: 'Un sistema conectado', detail: 'React · API REST · persistencia' },
-  { number: '03', title: 'Una aplicación gestionable', detail: 'Cuentas · historial · administración' },
+  { title: 'Una partida completa', detail: 'Selección · turnos · progresión' },
+  { title: 'Un sistema conectado', detail: 'React · API REST · persistencia' },
+  { title: 'Una aplicación gestionable', detail: 'Cuentas · historial · administración' },
 ]
 
 export default function Product() {
@@ -17,13 +17,11 @@ export default function Product() {
     >
       <div className="product-layout">
         <figure className="product-shot framed-shot">
-          <img src={battleScreenshot} alt="Captura real de una batalla de Battle Odyssey" />
-          <figcaption><span className="live-dot" /> CAPTURA REAL DEL PRODUCTO</figcaption>
+          <img src={battleScreenshot} alt="Escena de combate de Battle Odyssey con un Guerrero y un Goblin" />
         </figure>
         <div className="proof-list">
           {proofPoints.map((point) => (
-            <article className="proof-point" key={point.number}>
-              <span className="proof-number">{point.number}</span>
+            <article className="proof-point" key={point.title}>
               <div><h2>{point.title}</h2><p>{point.detail}</p></div>
             </article>
           ))}

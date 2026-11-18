@@ -1,6 +1,6 @@
-# Battle Odyssey · Presentación para Tema Labs
+# Battle Odyssey
 
-Presentación local, independiente y de siete escenas para una exposición oral de **8 minutos**, incluida la transición a la demo real.
+Recorrido web local e independiente por el proyecto Battle Odyssey.
 
 ## Requisitos e instalación
 
@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Abre `http://localhost:5174`. La presentación usa ese puerto para dejar libre `http://localhost:5173` para el videojuego real. Para una versión de producción:
+Abre `http://localhost:5174`. El puerto 5173 queda disponible para el videojuego real. Para generar y servir el build:
 
 ```bash
 npm run lint
@@ -23,25 +23,21 @@ npm run preview
 
 - Flechas **← / →** para retroceder y avanzar.
 - Botones visibles **Anterior / Siguiente** y puntos de escena clicables.
-- La cabecera muestra el número de escena, el tiempo previsto y el progreso.
-- En la escena 3, cambia a la pestaña ya preparada del juego con **Ctrl + Tab**; vuelve con **Ctrl + Shift + Tab**. La presentación no abre una segunda instancia ni simula el videojuego.
+- La cabecera indica la escena actual y el progreso del recorrido.
+- En la escena del producto, cambia a la pestaña local del juego con **Ctrl + Tab** y vuelve con **Ctrl + Shift + Tab**. El videojuego se ejecuta fuera de esta aplicación; aquí no se simula.
 
-## Antes de la exposición
+## Antes de usarlo
 
-1. Ensaya el deck y la demo con cronómetro: 8 minutos como máximo, con 2:30 para la demo.
-2. Abre y prueba el juego en otra pestaña antes de presentar. Confirma API, base de datos, login, CORS y que la partida de demo parte de un estado conocido.
-3. No uses `migrate:fresh` contra una base con información que quieras conservar. Si necesitas restablecer la demo, confirma primero que es una base desechable.
-4. Prueba el acceso al juego en `http://localhost:5173` y revisa cómo volver a la presentación.
-5. La opción **Plan B** muestra una captura real estática del proyecto; no es una demo interactiva. Para un respaldo más completo, graba una ejecución real antes de la exposición.
+1. Abre y prueba el juego real en otra pestaña. Comprueba la API, la base de datos, el login, CORS y el estado de la partida.
+2. No uses `migrate:fresh` contra una base con información que quieras conservar. Restablece partidas solo en una base desechable.
+3. La opción **Plan B** mantiene disponible la pantalla entre batallas si falla la conexión. Como respaldo adicional, graba una ejecución real del juego.
 
-## Contenido y snippets
+## Contenido y código
 
-- `src/deck.js`: las siete escenas y su duración.
+- `src/deck.js`: orden y nombres de las escenas.
 - `src/scenes/`: contenido visual de cada escena.
-- `src/data/snippets.js`: fragmentos del código real con rutas y líneas de origen.
-- `src/styles/theme.css`: identidad visual, layout 16:9, animaciones y `prefers-reduced-motion`.
-- `src/assets/`: copias locales del logo, sprites y capturas. No hay symlinks a los proyectos originales.
+- `src/data/snippets.js`: fragmentos del código real con sus rutas y líneas de origen.
+- `src/styles/theme.css`: identidad visual, layout panorámico, tipografías, animaciones y `prefers-reduced-motion`.
+- `src/assets/`: copias locales del logo, sprites e imágenes del juego, sin symlinks.
 
-Assets usados: logo, fondos y sprites copiados de `battle-odyssey-presentation/src/assets/`; capturas de batalla y entre-batallas copiadas de `battle-odyssey-front/docs/screenshots/`.
-
-Los snippets deben volver a contrastarse con los repositorios de frontend y API si el código cambia antes de la presentación.
+Los fragmentos técnicos deben contrastarse de nuevo con el código de frontend y backend si este cambia.

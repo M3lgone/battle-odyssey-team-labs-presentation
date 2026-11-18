@@ -1,10 +1,10 @@
 import SceneLayout from '../components/SceneLayout.jsx'
 
 const nodes = [
-  { key: 'react', title: 'React', type: 'UI + combate local', mark: '01' },
-  { key: 'axios', title: 'Axios', type: 'HTTP · JSON · Bearer', mark: '02' },
-  { key: 'laravel', title: 'Laravel API', type: 'rutas · validación · servicios', mark: '03' },
-  { key: 'mysql', title: 'MySQL', type: 'partidas · batallas · relaciones', mark: '04' },
+  { key: 'react', title: 'React', type: 'UI + combate local' },
+  { key: 'axios', title: 'Axios', type: 'HTTP · JSON · Bearer' },
+  { key: 'laravel', title: 'Laravel API', type: 'rutas · validación · servicios' },
+  { key: 'mysql', title: 'MySQL', type: 'partidas · batallas · relaciones' },
 ]
 
 export default function Architecture() {
@@ -20,7 +20,6 @@ export default function Architecture() {
           {nodes.map((node, index) => (
             <div className="flow-part" key={node.key}>
               <article className={`flow-node flow-node--${node.key}`}>
-                <span className="node-mark">{node.mark}</span>
                 <h2>{node.title}</h2>
                 <p>{node.type}</p>
               </article>

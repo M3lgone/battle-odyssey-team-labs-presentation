@@ -10,8 +10,8 @@ export default function Navigation({ scenes, index, onGo, onNext, onPrevious }) 
             className={`scene-dot${sceneIndex === index ? ' is-active' : ''}`}
             key={scene.id}
             type="button"
-            title={`${sceneIndex + 1}. ${scene.label}`}
-            aria-label={`Ir a escena ${sceneIndex + 1}: ${scene.label}`}
+            title={scene.label}
+            aria-label={`Ir a escena: ${scene.label}`}
             aria-current={sceneIndex === index ? 'step' : undefined}
             onClick={() => onGo(sceneIndex)}
           />
